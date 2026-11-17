@@ -1,0 +1,31 @@
+/* Governance & Enterprise Readiness: the one full yellow band, identical in both themes */
+.governance { background: var(--band); color: var(--band-ink); --grid-line: rgba(18, 22, 28, 0.12); --text: var(--band-ink); --text-muted: var(--band-ink); }
+.governance .section-label, .governance .section-heading h2 { color: var(--band-ink); }
+.governance .section-heading__sub { color: var(--band-ink); opacity: 0.85; max-width: 520px; }
+.governance .section-label .double-circle { color: var(--band-ink); fill: var(--band-ink); }
+.governance-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); grid-template-areas: 'head cards' 'roles roles'; gap: 48px 56px; align-items: start; }
+.governance-layout > .section-heading { grid-area: head; margin-bottom: 0; }
+.governance-cards { grid-area: cards; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.governance-card { --chamfer: 16px; transition: transform 0.25s ease; }
+.governance-card:hover { transform: translateY(-3px); }
+.governance-card__inner { display: flex; flex-direction: column; justify-content: space-between; gap: 26px; min-height: 150px; padding: 22px 20px; color: var(--on-dark); }
+.governance-card svg { color: var(--accent); }
+.governance-card h3 { color: var(--on-dark); font: 600 1.05rem/1.25 Inter, sans-serif; letter-spacing: 0; text-transform: none; }
+.roles { grid-area: roles; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 14px; }
+.roles > strong { font-weight: 500; font-size: 1rem; color: var(--band-ink); }
+.roles__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.role-chip { padding: 11px 22px; border-radius: 999px; border: 1px solid var(--dark-border); background: var(--dark-surface); color: var(--on-dark); font: 500 0.95rem Inter, sans-serif; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+.role-chip:hover, .role-chip:focus-visible { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(18, 22, 28, 0.3); }
+.role-chip:active { transform: scale(0.98); }
+.role-chip:focus-visible { outline: 3px solid var(--band-ink); outline-offset: 3px; }
+.governance .tooltip__bubble { max-width: 240px; text-align: left; }
+
+@media (max-width: 960px) {
+  .governance-layout { grid-template-columns: 1fr; grid-template-areas: 'head' 'cards' 'roles'; gap: 36px; }
+}
+@media (max-width: 760px) {
+  .governance-cards { gap: 9px; }
+  .governance-card__inner { min-height: 128px; padding: 16px; gap: 18px; }
+  .governance-card h3 { font-size: 0.88rem; }
+  .role-chip { padding: 9px 14px; font-size: 0.8rem; }
+}

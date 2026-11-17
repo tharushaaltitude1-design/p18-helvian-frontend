@@ -1,0 +1,16 @@
+/* S6: forms, modal success, drawer actions, legal + route fallback */
+.modal-success { display: grid; justify-items: start; gap: 14px; padding: 8px 0 4px; outline: none; }
+.modal-success svg { color: var(--accent); }
+.modal-success h3 { font: 800 1.6rem/1.1 Syne, sans-serif; }
+.modal-success p { color: var(--text-muted); max-width: 46ch; line-height: 1.6; }
+.drawer__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.legal-links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border); }
+.legal-links a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 4px; }
+.legal-links a:hover, .legal-links a:focus-visible { color: var(--accent); }
+.legal-content section + section { margin-top: 0; }
+.route-fallback { min-height: 100vh; display: grid; place-items: center; color: var(--text-muted); background: var(--bg); }
+.honeypot { width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.field input[aria-invalid="true"], .field select[aria-invalid="true"], .field textarea[aria-invalid="true"] { border-color: var(--danger); }
+.field-error { line-height: 1.4; }
+[inert] { pointer-events: none; }
+main:focus { outline: none; }

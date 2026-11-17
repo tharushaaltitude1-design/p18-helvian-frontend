@@ -1,0 +1,44 @@
+/* FAQ: tabs + accordion */
+.faq-section { padding-top: 0; }
+.faq-section > .marquee { margin-bottom: 72px; }
+.faq-section .section-heading { margin-left: auto; margin-right: auto; text-align: center; }
+.faq-section .section-label { justify-content: center; }
+.faq-layout { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 32px; align-items: start; }
+.faq-sidebar { display: grid; gap: 22px; }
+.tabs { display: grid; gap: 8px; }
+.tab {
+  --chamfer: 10px; padding: 14px 20px; text-align: left; border: 0; cursor: pointer; font: 500 1rem Inter, sans-serif;
+  background: var(--surface-2); color: var(--text); transition: background 0.2s, color 0.2s, transform 0.2s;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+.tab:hover { background: var(--border); }
+.tab.is-active { background: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.tab:active { transform: scale(0.98); }
+.tab:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.faq-aside__inner { display: grid; gap: 10px; padding: 24px 22px; }
+.faq-aside svg { color: var(--accent); }
+.faq-aside h3 { font: 700 1.15rem/1.3 Inter, sans-serif; letter-spacing: 0; text-transform: none; }
+.faq-aside p { margin: 0; color: var(--text-muted); font-size: 0.92rem; }
+.faq-aside__actions { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+.accordion { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.accordion-item { --chamfer: 16px; }
+.accordion-item h3 { margin: 0; font: inherit; letter-spacing: 0; text-transform: none; }
+.accordion-item h3 button {
+  display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 22px; background: transparent;
+  border: 0; color: inherit; text-align: left; font: 600 1.05rem/1.35 Inter, sans-serif; cursor: pointer;
+}
+.accordion-item h3 button:focus-visible { outline: 3px solid var(--accent); outline-offset: -4px; }
+.accordion-item.is-open h3 button:focus-visible { outline-color: var(--accent-ink); }
+.accordion-icon { flex: none; width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; background: var(--accent); color: var(--accent-ink); transition: background 0.2s; }
+.accordion-item.is-open .accordion-icon { background: var(--accent-ink); color: var(--accent); }
+.accordion-panel { display: grid; grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows 0.3s ease, visibility 0s linear 0.3s; }
+.accordion-panel > div { overflow: hidden; min-height: 0; }
+.accordion-item.is-open .accordion-panel { grid-template-rows: 1fr; visibility: visible; transition-delay: 0s; }
+.accordion-panel p { margin: 0; padding: 0 22px 22px; max-width: 62ch; line-height: 1.6; color: var(--accent-ink); }
+@media (prefers-reduced-motion: reduce) { .accordion-panel { transition: none; } }
+
+@media (max-width: 960px) {
+  .faq-layout { grid-template-columns: 1fr; }
+  .tabs { display: flex; overflow-x: auto; gap: 8px; padding-bottom: 6px; scroll-snap-type: x proximity; }
+  .tab { flex: none; scroll-snap-align: start; white-space: nowrap; }
+}
