@@ -33,7 +33,7 @@ export function HomePage() {
       <a className="skip-link" href="#main">
         {ui.skip}
       </a>
-      <Navbar theme={theme} onToggleTheme={toggle} onDemo={() => openDemo()} onMenu={() => setMenuOpen(true)} active={active} />
+      <Navbar onDemo={() => openDemo()} onMenu={() => setMenuOpen(true)} active={active} />
       <MobileMenu
         active={active}
         open={menuOpen}
@@ -52,7 +52,7 @@ export function HomePage() {
         <ApplicationPreview />
         <Technology />
         <Governance />
-        <Pricing onDemo={openDemo} />
+        <Pricing />
         <Testimonials />
         <Faq />
         <Contact onToast={toast.show} />

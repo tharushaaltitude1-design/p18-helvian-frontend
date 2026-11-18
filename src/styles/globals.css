@@ -67,8 +67,9 @@ h1,
 h2,
 h3 {
   font-family: Syne, sans-serif;
-  line-height: 1.04;
-  letter-spacing: -0.045em;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  padding-bottom: 0.08em;
 }
 h1 {
   font-size: clamp(2.6rem, 5.2vw, 5rem);
@@ -130,6 +131,8 @@ h3 {
 }
 .section-heading h2 {
   margin-top: 18px;
+  line-height: 1.15;
+  padding-bottom: 0.08em;
 }
 .section-heading__sub {
   color: var(--text-muted);
@@ -157,6 +160,9 @@ h3 {
 }
 .highlight {
   color: var(--accent);
+  display: inline-block;
+  line-height: inherit;
+  padding-bottom: 0.08em;
 }
 .section-heading--light h2,
 .section-label--light {

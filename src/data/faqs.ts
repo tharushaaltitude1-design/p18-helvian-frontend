@@ -71,19 +71,19 @@ export const faqCategories = {
   Pricing: [
     [
       'How is pricing shown?',
-      'The plans use illustrative monthly starting points. Final quotes are provided per facility.',
+      'Use the toggle to compare monthly and annual packages. Prices are illustrative; final quotes are provided per facility.',
     ],
     [
       'Does every plan include onboarding?',
-      'Dedicated onboarding is listed for the Healthcare Network plan; onboarding conversations can be part of any facility discussion.',
+      'Dedicated onboarding is listed for the Custom plan; onboarding conversations can be part of any facility discussion.',
     ],
     [
       'Can a hospital start with one facility?',
-      'Yes. Hospital System is described as per-facility licensing.',
+      'Yes. Professional is described as per-facility licensing.',
     ],
     [
       'Can I discuss a custom workflow?',
-      'Yes. Contact Sales opens the demo request flow with the plan preselected.',
+      'Yes. Contact Sales on the Custom plan takes you to the contact form.',
     ],
   ],
   Technology: [

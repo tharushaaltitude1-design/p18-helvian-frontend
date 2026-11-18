@@ -1,9 +1,16 @@
 /* Testimonials */
 .testimonial-layout { display: grid; grid-template-columns: 1.05fr 1fr; gap: 24px; align-items: stretch; }
 .testimonial-feature { --chamfer: 22px; margin: 0; }
+.testimonial-feature,
+.testimonial-feature blockquote,
+.testimonial-feature .testimonial-person strong,
+.testimonial-feature .testimonial-person small,
+.testimonial-feature .quote-mark {
+  color: var(--accent-ink) !important;
+}
 .testimonial-feature__inner { position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; min-height: 100%; padding: 40px 40px 36px; }
 .testimonial-feature .quote-mark { position: absolute; top: 28px; right: 32px; opacity: 0.9; }
-.testimonial-feature blockquote { margin: 0; padding-right: 48px; font: 800 clamp(1.4rem, 2.4vw, 2.1rem) / 1.25 Syne, sans-serif; color: var(--accent-ink); }
+.testimonial-feature blockquote { margin: 0; padding-right: 48px; font: 800 clamp(1.4rem, 2.4vw, 2.1rem) / 1.28 Syne, sans-serif; padding-bottom: 0.06em; }
 .testimonial-side { display: grid; gap: 24px; }
 .testimonial-small { --chamfer: 20px; margin: 0; }
 .testimonial-small__inner { display: flex; align-items: center; height: 100%; padding: 28px; }

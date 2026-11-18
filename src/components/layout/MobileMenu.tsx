@@ -43,8 +43,7 @@ export function MobileMenu({ open, onClose, onDemo, active }: Props) {
         })}
       </nav>
       <div className="mobile-menu__actions">
-        <Button className="mobile-menu__cta" onClick={onDemo}>Request Demo <ArrowUpRight size={17} aria-hidden="true" /></Button>
-        <DashboardLink variant="outline" className="mobile-menu__dashboard" />
+        <Button to="/product" className="mobile-menu__cta" onClick={onClose}>HV.OS <ArrowUpRight size={17} aria-hidden="true" /></Button>
       </div>
     </div>
   );

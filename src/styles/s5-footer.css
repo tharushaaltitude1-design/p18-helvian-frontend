@@ -9,7 +9,11 @@
 .footer-grid > *:not(:first-child) { border-left: 1px solid var(--border); }
 .footer-grid h3 { font: 700 1.25rem Syne, sans-serif; letter-spacing: 0; text-transform: none; color: var(--accent); margin-bottom: 18px; }
 .footer-grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.footer-grid .social-row { display: flex !important; flex-direction: row; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 6px; }
 .footer-grid a, .footer-grid address { color: var(--text); text-decoration: none; font-style: normal; font-size: 0.95rem; line-height: 1.5; }
+.footer-contact-label { font-weight: 600; color: var(--accent); margin-right: 4px; font-size: 0.85rem; }
+.footer-address-item address { font-size: 0.86rem; line-height: 1.55; color: var(--text-muted); margin-top: 4px; }
+.footer-address-item strong { color: var(--text); }
 .footer-grid a { transition: color 0.2s; }
 .footer-grid a:hover { color: var(--accent); }
 .footer-grid a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
@@ -23,6 +27,7 @@
 .newsletter button:disabled { opacity: 0.6; cursor: progress; }
 .newsletter button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .newsletter-wrap .field-error { display: block; margin-top: 8px; }
+.newsletter-wrap .field-success { display: block; margin-top: 8px; color: var(--success); font-size: 0.8rem; font-weight: 500; }
 .footer-bottom { background: var(--bg-deep); }
 .footer-bottom .container { display: flex; justify-content: space-between; align-items: center; gap: 12px 24px; flex-wrap: wrap; padding: 18px 0; color: var(--text-muted); font-size: 0.88rem; }
 .footer-bottom ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 0; }

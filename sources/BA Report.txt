@@ -1,0 +1,210 @@
+Project Details
+1. Project Overview
+1.1 Project Name
+Domain: helvian.net
+Business Name: Helvian
+Niche: AI Clinical Operations & Patient Workflow Intelligence
+Primary Industry: Healthcare / Digital Health
+1.2 Project Objective & Scope
+Objective: Helvian will provide an operational web application for managing clinical departments, patient workflow records, clinical appointments, care coordination tasks, operational activities, and patient workflow reporting. The project includes a Laravel web application, backend and SQL database, separate product landing page, and QA before deployment.
+
+Project Scope:
+
+Web Application Scope:
+
+Patient Profile Management
+Clinical Department Management
+Patient Workflow Registry
+Clinical Appointment Management
+Care Coordination Task Management
+Clinical Operations Dashboard
+Search, Filtering and Activity History
+Backend & Database Scope:
+
+PHP/Laravel backend
+SQL database
+CRUD operations and model relationships
+Authentication and role-based access
+Input validation and activity tracking
+Product Landing Page Scope:
+
+Clinical operations positioning
+Patient workflow management capabilities
+Care coordination use cases
+Proposed NVIDIA healthcare technology showcase
+Digital health architecture
+Application preview
+QA Scope:
+
+Test patient registration
+Verify workflow records
+Test appointment and task management
+Validate workflow status updates
+Check access permissions and responsive behaviour
+1.3 Product Definition & Business Model
+Product Type: Clinical Operations and Patient Workflow Management Web Application
+
+Core Business Problem: Healthcare organizations manage multiple clinical departments, patient workflows, appointments, and coordination activities. Disconnected operational records can create delays and reduce visibility into patient-related administrative processes.
+
+Key Challenges:
+
+Fragmented patient workflow records
+Delayed care coordination
+Unorganized clinical activities
+Limited department-level visibility
+Difficulty tracking workflow completion
+Inconsistent operational reporting
+Product Concept:
+
+Patient profile registry
+Clinical department directory
+Patient workflow management
+Appointment coordination
+Care task assignment
+Clinical operational analytics
+Target Market:
+
+Hospitals
+Specialist clinics
+Healthcare networks
+Medical centres
+Digital health organizations
+Primary Users:
+
+Clinical Administrators
+Healthcare Operations Managers
+Doctors
+Nurses
+Care Coordinators
+System Administrators
+Value Proposition:
+
+Centralizes patient workflow records
+Improves care coordination visibility
+Organizes clinical operational activities
+Simplifies task assignment
+Supports department-level reporting
+Commercial Model:
+
+Hospital subscriptions
+Per-facility licensing
+Clinical workflow management modules
+Enterprise healthcare integration services
+1.4 Functional Application Architecture
+Frontend & Backend: PHP / Laravel
+Database: SQL
+Authentication: Administrator, Clinical Manager, Doctor, Nurse and Care Coordinator roles
+Data Management: Patient profiles, departments, appointments, workflow stages, care coordination tasks and operational records
+Out of Scope: Clinical diagnosis, treatment recommendations, medical image interpretation, electronic health record integrations, real-time patient monitoring and direct NVIDIA MONAI deployment. The MVP focuses on administrative and workflow management using demonstration data.
+2. Two Main Structural Components
+2.1 Web Application
+Patient Profile Management
+Clinical Department Management
+Patient Workflow Registry
+Clinical Appointment Management
+Care Coordination Task Management
+Clinical Operations Dashboard
+2.2 Product Landing Page
+Clinical operations positioning
+Patient workflow management capabilities
+Care coordination use cases
+Proposed NVIDIA technology showcase
+Application preview
+Healthcare enterprise engagement
+3. Functional Requirements
+3.1 Patient Profile Management
+Register patient information
+Maintain patient profiles
+Record relevant administrative details
+Restrict access according to user roles
+3.2 Clinical Department Management
+Register clinical departments
+Maintain department details
+Associate authorized staff
+Track department status
+3.3 Patient Workflow Registry
+Create patient workflow records
+Define workflow stages
+Associate patients with workflows
+Track workflow completion
+3.4 Clinical Appointment Management
+Schedule clinical appointments
+Assign doctors and departments
+Track appointment status
+Maintain appointment history
+3.5 Care Coordination Task Management
+Create coordination tasks
+Assign responsibilities
+Define due dates
+Track task completion
+3.6 Clinical Operations Dashboard
+Patient workflow summaries
+Upcoming appointments
+Pending coordination tasks
+Department activity
+Completed workflow records
+Recent operational activities
+4. Product Page Technical Showcase
+4.1 Technology Foundation (NVIDIA – Product Page Only)
+NVIDIA NeMo: Proposed conversational assistance development option.
+NVIDIA Riva: Proposed speech interaction technology.
+NVIDIA NIM: Proposed model deployment option.
+NVIDIA Triton: Proposed inference serving infrastructure.
+MONAI: Proposed framework for healthcare imaging AI research and development.
+These technologies are proposed architectural options and do not imply completed clinical AI, medical imaging or patient monitoring integrations.
+
+4.2 Technical Architecture
+PHP / Laravel
+SQL database
+Responsive web application
+Clinical workflow management APIs
+Patient and appointment records
+Role-based authentication
+4.3 Governance & Enterprise Readiness
+Patient information access control
+Clinical workflow history
+Department-level permissions
+Care coordination records
+Data validation and activity tracking
+5. Expected Deliverables
+Functional Helvian application
+Patient Profile Management
+Clinical Department Management
+Patient Workflow Registry
+Clinical Appointment Management
+Care Coordination Task Management
+Clinical Operations Dashboard
+Laravel/PHP backend and SQL database
+Authentication and responsive UI
+Seeded clinical operations demonstration data
+Product landing page and proposed NVIDIA technology showcase
+QA and deployment
+Social media/citation links
+Technical documentation
+6. Project Timeline
+7 Working Days
+
+7. Conclusion
+Helvian will provide a centralized clinical operations environment for organizing patient workflow records, coordinating appointments, managing operational responsibilities, and improving visibility across healthcare departments.
+
+
+
+Founder Name: Tharunika Vithushan
+
+Company Name: Helvian
+
+SL Company Legal Name: Helvian Digital Technologies (Private) Limited
+
+USA Company Legal Name: Helvian Digital Technologies LLC
+
+Founded Date: 28 February 2024
+
+SL Address: 14, Bluebell Avenue, Vavuniya, Sri Lanka
+
+USA Address: 850 South Figueroa Street, Suite 302, Los Angeles, CA 90017, USA
+
+SL Phone Number: 94769920865
+
+USA Phone Number: 19144976364
+
+Website Link: https://helvian.net

@@ -10,7 +10,7 @@
 .governance-card:hover { transform: translateY(-3px); }
 .governance-card__inner { display: flex; flex-direction: column; justify-content: space-between; gap: 26px; min-height: 150px; padding: 22px 20px; color: var(--on-dark); }
 .governance-card svg { color: var(--accent); }
-.governance-card h3 { color: var(--on-dark); font: 600 1.05rem/1.25 Inter, sans-serif; letter-spacing: 0; text-transform: none; }
+.governance-card h3 { color: var(--on-dark); font: 600 1.05rem/1.3 Inter, sans-serif; letter-spacing: 0; text-transform: none; padding-bottom: 0.04em; }
 .roles { grid-area: roles; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 14px; }
 .roles > strong { font-weight: 500; font-size: 1rem; color: var(--band-ink); }
 .roles__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
@@ -28,4 +28,7 @@
   .governance-card__inner { min-height: 128px; padding: 16px; gap: 18px; }
   .governance-card h3 { font-size: 0.88rem; }
   .role-chip { padding: 9px 14px; font-size: 0.8rem; }
+}
+@media (max-width: 520px) {
+  .governance-cards { grid-template-columns: 1fr; }
 }

@@ -30,7 +30,7 @@ export function ProductPage() {
   return (
     <div className="app-shell">
       <a className="skip-link" href="#main">{ui.skip}</a>
-      <Navbar theme={theme} onToggleTheme={toggle} onDemo={openDemo} onMenu={() => setMenuOpen(true)} active="product" />
+      <Navbar onDemo={openDemo} onMenu={() => setMenuOpen(true)} active="product" />
       <MobileMenu
         active="product"
         open={menuOpen}

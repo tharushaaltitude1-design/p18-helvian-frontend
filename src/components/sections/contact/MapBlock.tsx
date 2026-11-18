@@ -1,29 +1,113 @@
-import { contact } from '@/data';
+import { useState } from 'react';
+import { ArrowUpRight, Building2, MapPin, Phone } from 'lucide-react';
+import { cn } from '@/utils';
 
-/** Inline line-art map (no external tiles). One pulsing pin marks the office. */
+const mapLocations = {
+  usa: {
+    id: 'usa',
+    label: 'USA Office (Los Angeles)',
+    title: 'Helvian Digital Technologies LLC',
+    badge: 'USA Office',
+    city: 'Los Angeles, California',
+    address: '850 South Figueroa Street, Suite 302, Los Angeles, CA 90017, USA',
+    phone: '+1 (914) 497-6364',
+    phoneRaw: '+19144976364',
+    embedUrl:
+      'https://maps.google.com/maps?q=850+South+Figueroa+Street+Suite+302+Los+Angeles+CA+90017+USA&t=&z=16&ie=UTF8&iwloc=&output=embed',
+    directUrl:
+      'https://www.google.com/maps/search/?api=1&query=850+South+Figueroa+Street+Suite+302+Los+Angeles+CA+90017+USA',
+  },
+  sl: {
+    id: 'sl',
+    label: 'Sri Lanka Office (Vavuniya)',
+    title: 'Helvian Digital Technologies (Pvt) Ltd',
+    badge: 'Sri Lanka Office',
+    city: 'Vavuniya, Sri Lanka',
+    address: '14, Bluebell Avenue, Vavuniya, Sri Lanka',
+    phone: '+94 76 992 0865',
+    phoneRaw: '+94769920865',
+    embedUrl:
+      'https://maps.google.com/maps?q=14+Bluebell+Avenue+Vavuniya+Sri+Lanka&t=&z=16&ie=UTF8&iwloc=&output=embed',
+    directUrl:
+      'https://www.google.com/maps/search/?api=1&query=14+Bluebell+Avenue+Vavuniya+Sri+Lanka',
+  },
+} as const;
+
+type LocationKey = keyof typeof mapLocations;
+
 export function MapBlock() {
+  const [activeKey, setActiveKey] = useState<LocationKey>('usa');
+  const active = mapLocations[activeKey];
+
   return (
-    <figure className="map-block">
-      <svg viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label={contact.map.label}>
-        <g className="map-streets">
-          <path d="M0 70 L1200 30 M0 150 L1200 120 M0 230 L1200 250 M0 290 L1200 276" />
-          <path d="M120 0 L170 300 M330 0 L300 300 M520 0 L560 300 M760 0 L720 300 M980 0 L1030 300 M1150 0 L1130 300" />
-        </g>
-        <g className="map-blocks">
-          <rect x="190" y="82" width="90" height="48" /><rect x="350" y="44" width="110" height="56" /><rect x="590" y="90" width="100" height="40" />
-          <rect x="790" y="60" width="150" height="46" /><rect x="1050" y="72" width="70" height="50" /><rect x="200" y="172" width="100" height="50" />
-          <rect x="360" y="168" width="120" height="44" /><rect x="580" y="164" width="110" height="60" /><rect x="800" y="150" width="130" height="64" />
-          <rect x="1040" y="160" width="80" height="60" /><rect x="360" y="252" width="120" height="30" /><rect x="800" y="268" width="140" height="24" />
-        </g>
-        <path className="map-river" d="M0 200 C200 170 360 250 560 215 S900 120 1200 190" />
-        <path className="map-route" d="M170 300 L240 150 L560 130 L730 96" />
-        <g transform="translate(730 96)">
-          <circle className="map-pulse" r="12" />
-          <path className="map-pin" d="M0 0 C-20 -22 -20 -44 0 -44 C20 -44 20 -22 0 0Z" />
-          <circle className="map-pin-dot" cy="-30" r="5" />
-        </g>
-      </svg>
-      <figcaption>{contact.map.caption}</figcaption>
-    </figure>
+    <section className="map-section" aria-label="Helvian Global Office Locations">
+      <div className="map-controls">
+        <div className="map-switcher" role="tablist" aria-label="Office Location Selector">
+          <button
+            type="button"
+            role="tab"
+            aria-selected={activeKey === 'usa'}
+            className={cn('map-tab', activeKey === 'usa' && 'is-active')}
+            onClick={() => setActiveKey('usa')}
+          >
+            <span className="map-tab-flag" aria-hidden="true">🇺🇸</span>
+            <span>USA Office</span>
+            <small>Los Angeles</small>
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={activeKey === 'sl'}
+            className={cn('map-tab', activeKey === 'sl' && 'is-active')}
+            onClick={() => setActiveKey('sl')}
+          >
+            <span className="map-tab-flag" aria-hidden="true">🇱🇰</span>
+            <span>Sri Lanka Office</span>
+            <small>Vavuniya</small>
+          </button>
+        </div>
+      </div>
+
+      <div className="map-container">
+        <div className="map-card" tabIndex={0}>
+          <div className="map-card__header">
+            <span className="badge map-card__badge">{active.badge}</span>
+            <span className="map-card__city">{active.city}</span>
+          </div>
+          <h4 className="map-card__title">
+            <Building2 size={16} aria-hidden="true" />
+            <span>{active.title}</span>
+          </h4>
+          <address className="map-card__address">
+            <MapPin size={15} aria-hidden="true" />
+            <span>{active.address}</span>
+          </address>
+          <div className="map-card__contact">
+            <Phone size={15} aria-hidden="true" />
+            <a href={`tel:${active.phoneRaw}`}>{active.phone}</a>
+          </div>
+          <a
+            className="map-card__action"
+            href={active.directUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${active.title} address in Google Maps (opens in a new tab)`}
+          >
+            <span>Open in Google Maps</span>
+            <ArrowUpRight size={14} aria-hidden="true" />
+          </a>
+        </div>
+
+        <iframe
+          key={active.id}
+          title={`Google Map showing ${active.title} at ${active.address}`}
+          src={active.embedUrl}
+          className="map-iframe"
+          loading="lazy"
+          allowFullScreen={false}
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </div>
+    </section>
   );
 }

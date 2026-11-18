@@ -32,12 +32,26 @@ export function Footer({ onToast }: { onToast: (message: string) => void }) {
               ))}
             </ul>
           </nav>
-          <div>
+          <div className="footer-contact-col">
             <h3>{footer.titles.contact}</h3>
-            <ul>
-              <li><a href={`tel:${brand.phone.replace(/[^\d+]/g, '')}`}>{brand.phone}</a></li>
-              <li><a href={`mailto:${brand.email}`}>{brand.email}</a></li>
-              <li><address>{brand.address}<br />{brand.city}</address></li>
+            <ul className="footer-contact-list">
+              <li>
+                <span className="footer-contact-label">USA:</span>{' '}
+                <a href={`tel:${brand.phoneUSRaw}`}>{brand.phoneUS}</a>
+              </li>
+              <li>
+                <span className="footer-contact-label">SL:</span>{' '}
+                <a href={`tel:${brand.phoneSLRaw}`}>{brand.phoneSL}</a>
+              </li>
+              <li>
+                <a href={`mailto:${brand.email}`}>{brand.email}</a>
+              </li>
+              <li className="footer-address-item">
+                <address>
+                  <strong>USA:</strong> {brand.addressUS}<br />
+                  <strong>SL:</strong> {brand.addressSL}
+                </address>
+              </li>
             </ul>
           </div>
           <NewsletterForm onToast={onToast} />

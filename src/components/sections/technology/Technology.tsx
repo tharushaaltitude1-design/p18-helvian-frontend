@@ -34,8 +34,8 @@ export function Technology({
           <span>{description}</span>
         </SectionHeading>
         <ul className="technology-cards">
-          {items.map((item) => (
-            <TechnologyCard key={item.name} badge={badge} roleLabel={roleLabel} {...item} />
+          {items.map((item, index) => (
+            <TechnologyCard key={item.name || index} badge={badge} roleLabel={roleLabel} {...item} />
           ))}
         </ul>
         <Architecture />

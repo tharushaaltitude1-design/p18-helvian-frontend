@@ -139,7 +139,7 @@ export const productTechnology = {
   badge: 'Proposed',
   roleLabel: 'Proposed role in Helvian',
   disclaimer:
-    'These technologies are proposed architectural options and do not imply completed clinical AI, medical imaging or patient monitoring integrations.',
+    'The technologies are proposed architectural options and do not imply finished clinical tools, medical imaging or patient monitoring integrations.',
   items: [
     {
       name: 'NVIDIA NeMo',

@@ -14,13 +14,38 @@ export function Contact({ onToast }: { onToast: (message: string) => void }) {
         <div className="contact-layout">
           <ContactForm onToast={onToast} />
           <div className="contact-aside">
-            <InfoCard title={contact.cards.address}>
+            <InfoCard title="USA Office">
               <MapPin size={16} aria-hidden="true" />
-              <address>{brand.address}<br />{brand.city}</address>
+              <address>
+                <strong>Helvian Digital Technologies LLC</strong><br />
+                850 South Figueroa Street, Suite 302<br />
+                Los Angeles, CA 90017, USA
+              </address>
+            </InfoCard>
+            <InfoCard title="Sri Lanka Office">
+              <MapPin size={16} aria-hidden="true" />
+              <address>
+                <strong>Helvian Digital Technologies (Pvt) Ltd</strong><br />
+                14, Bluebell Avenue<br />
+                Vavuniya, Sri Lanka
+              </address>
             </InfoCard>
             <InfoCard title={contact.cards.contact}>
               <Phone size={16} aria-hidden="true" />
-              <span><a href={`tel:${brand.phone.replace(/[^\d+]/g, '')}`}>{brand.phone}</a><br /><a href={`mailto:${brand.email}`}>{brand.email}</a></span>
+              <div className="contact-numbers">
+                <div>
+                  <span className="contact-tag">USA:</span>{' '}
+                  <a href={`tel:${brand.phoneUSRaw}`}>{brand.phoneUS}</a>
+                </div>
+                <div>
+                  <span className="contact-tag">SL:</span>{' '}
+                  <a href={`tel:${brand.phoneSLRaw}`}>{brand.phoneSL}</a>
+                </div>
+                <div>
+                  <span className="contact-tag">Email:</span>{' '}
+                  <a href={`mailto:${brand.email}`}>{brand.email}</a>
+                </div>
+              </div>
             </InfoCard>
             <InfoCard title={contact.cards.hours}>
               <Clock3 size={16} aria-hidden="true" />

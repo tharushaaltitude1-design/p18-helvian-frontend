@@ -20,7 +20,7 @@ export function Architecture() {
       <ol className="architecture-stack">
         <li className={cn('architecture-ai', active === -1 && 'is-active')} {...bind(-1)}>
           <Sparkles size={17} aria-hidden="true" />
-          <span>{`${aiLayer.label} (${aiLayer.items.join(' · ')})`}</span>
+          <span>{aiLayer.items && aiLayer.items.length > 0 ? `${aiLayer.label} (${aiLayer.items.join(' · ')})` : aiLayer.label}</span>
         </li>
         {top.map(({ name, index }) => (
           <li className={cn('architecture-layer', `layer-${index}`, active === index && 'is-active')} key={name} {...bind(index)}>

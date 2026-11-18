@@ -1,6 +1,6 @@
 import { ChamferCard, Icon } from '@/components/ui';
 
-type Props = { name: string; description: string; icon: string; badge: string; role?: string; roleLabel?: string };
+type Props = { name?: string; description: string; icon: string; badge: string; role?: string; roleLabel?: string };
 
 export function TechnologyCard({ name, description, icon, badge, role, roleLabel }: Props) {
   return (
@@ -9,8 +9,8 @@ export function TechnologyCard({ name, description, icon, badge, role, roleLabel
         <Icon name={icon} size={22} />
         <span className="badge">{badge}</span>
       </div>
-      <h3>{name}</h3>
-      <p>{description}</p>
+      {name ? <h3>{name}</h3> : null}
+      <p className={!name ? 'technology-card__desc--standalone' : undefined}>{description}</p>
       {role && roleLabel && (
         <p className="technology-card__role">
           <span>{roleLabel}</span> {role}

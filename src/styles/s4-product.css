@@ -13,7 +13,7 @@
 .product-module:hover { transform: translateY(-4px); }
 .product-module__inner { display: flex; flex-direction: column; gap: 18px; height: 100%; padding: 24px; }
 .product-module__top { display: flex; align-items: flex-start; gap: 14px; color: var(--accent); }
-.product-module__top h3 { margin: 0; color: var(--text); font: 700 1.15rem/1.2 Syne, sans-serif; letter-spacing: -0.02em; }
+.product-module__top h3 { margin: 0; color: var(--text); font: 700 1.15rem/1.25 Syne, sans-serif; letter-spacing: -0.02em; padding-bottom: 0.04em; }
 .product-module__list { display: grid; gap: 10px; list-style: none; margin: 0; padding: 0; color: var(--text-muted); font-size: 0.9rem; line-height: 1.45; }
 .product-module__list li { position: relative; padding-left: 18px; }
 .product-module__list li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
@@ -22,7 +22,7 @@
 .product-use-case { --chamfer: 16px; }
 .product-use-case__inner { display: flex; flex-direction: column; gap: 14px; height: 100%; min-height: 190px; padding: 26px; }
 .product-use-case__inner > svg { color: var(--accent); }
-.product-use-case h3 { font: 700 1.25rem/1.15 Syne, sans-serif; letter-spacing: -0.02em; }
+.product-use-case h3 { font: 700 1.25rem/1.22 Syne, sans-serif; letter-spacing: -0.02em; padding-bottom: 0.04em; }
 .product-use-case p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.55; }
 .product-use-case__role { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: auto; color: var(--text-subtle); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .product-use-case__role > span { color: var(--accent); }

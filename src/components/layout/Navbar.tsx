@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, Menu } from 'lucide-react';
-import { Button, DashboardLink, IconButton, Logo, ThemeToggle } from '@/components/ui';
+import { Button, IconButton, Logo } from '@/components/ui';
 import { useSectionLink } from '@/hooks/useSectionLink';
 import { navigation } from '@/data';
 import { cn } from '@/utils';
 
-type Props = { theme: 'dark' | 'light'; onToggleTheme: () => void; onDemo: () => void; onMenu: () => void; active: string };
+type Props = { theme?: 'dark' | 'light'; onToggleTheme?: () => void; onDemo?: () => void; onMenu: () => void; active: string };
 
-export function Navbar({ theme, onToggleTheme, onDemo, onMenu, active }: Props) {
+export function Navbar({ onMenu, active }: Props) {
   const [scrolled, setScrolled] = useState(false);
   const goTo = useSectionLink();
   useEffect(() => {
@@ -46,9 +46,7 @@ export function Navbar({ theme, onToggleTheme, onDemo, onMenu, active }: Props) 
           })}
         </div>
         <div className="nav-actions">
-          <ThemeToggle theme={theme} onToggle={onToggleTheme} />
-          <DashboardLink variant="outline" small className="nav-dashboard" />
-          <Button small onClick={onDemo}>Request Demo <ArrowUpRight size={15} aria-hidden="true" /></Button>
+          <Button small to="/product">HV.OS <ArrowUpRight size={15} aria-hidden="true" /></Button>
           <IconButton label="Open menu" className="menu-trigger" onClick={onMenu}><Menu aria-hidden="true" /></IconButton>
         </div>
       </nav>

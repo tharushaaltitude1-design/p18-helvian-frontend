@@ -34,7 +34,13 @@
 .accordion-panel { display: grid; grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows 0.3s ease, visibility 0s linear 0.3s; }
 .accordion-panel > div { overflow: hidden; min-height: 0; }
 .accordion-item.is-open .accordion-panel { grid-template-rows: 1fr; visibility: visible; transition-delay: 0s; }
-.accordion-panel p { margin: 0; padding: 0 22px 22px; max-width: 62ch; line-height: 1.6; color: var(--accent-ink); }
+.accordion-item:not(.is-open) h3 button { color: var(--text); }
+.accordion-item:not(.is-open) .accordion-panel p { color: var(--text-muted); }
+.accordion-item.is-open h3 button,
+.accordion-item.is-open .accordion-panel p {
+  color: var(--accent-ink) !important;
+}
+.accordion-panel p { margin: 0; padding: 0 22px 22px; max-width: 62ch; line-height: 1.6; }
 @media (prefers-reduced-motion: reduce) { .accordion-panel { transition: none; } }
 
 @media (max-width: 960px) {
