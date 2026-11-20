@@ -3,5 +3,6 @@ export { ProductCapabilities } from './ProductCapabilities';
 export { ProductClosingCta } from './ProductClosingCta';
 export { ProductEngagement } from './ProductEngagement';
 export { ProductOverview } from './ProductOverview';
+export { ProductRoadmap } from './ProductRoadmap';
 export { ProductScope } from './ProductScope';
 export { ProductUseCases } from './ProductUseCases';

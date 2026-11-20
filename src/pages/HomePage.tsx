@@ -44,7 +44,7 @@ export function HomePage() {
         }}
       />
       <main id="main" tabIndex={-1}>
-        <Hero onDemo={() => openDemo()} />
+        <Hero />
         <Marquee items={marqueeItems} />
         <About />
         <Platform onOpen={setModule} />
