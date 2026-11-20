@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { productMarquee, productMeta, productPreview, productTechnology, ui } from '@/data';
 import { useLockBodyScroll, usePageMeta, useTheme, useToast } from '@/hooks';
-import { Hero } from '@/components/sections/hero';
 import { ApplicationPreview } from '@/components/sections/app-preview';
 import { Technology } from '@/components/sections/technology';
 import { Governance } from '@/components/sections/governance';
 import {
   ProductCapabilities,
   ProductClosingCta,
+  ProductHero,
   ProductOverview,
   ProductRoadmap,
   ProductUseCases,
@@ -36,12 +36,11 @@ export function ProductPage() {
         onDemo={() => { setMenuOpen(false); openDemo(); }}
       />
       <main id="main" tabIndex={-1}>
-        <Hero variant="product" />
+        <ProductHero />
         <Marquee items={productMarquee} />
         <ProductOverview onDemo={openDemo} />
         <ProductCapabilities />
         <ProductUseCases />
-        <ApplicationPreview caption={productPreview.caption} />
         <ProductRoadmap />
         <Technology
           id="product-technology"

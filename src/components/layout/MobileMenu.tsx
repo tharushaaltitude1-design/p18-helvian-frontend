@@ -43,7 +43,7 @@ export function MobileMenu({ open, onClose, onDemo, active }: Props) {
         })}
       </nav>
       <div className="mobile-menu__actions">
-        <Button to="/product" className="mobile-menu__cta" onClick={onClose}>HV.OS <ArrowUpRight size={17} aria-hidden="true" /></Button>
+        <Button to="/product" className="mobile-menu__cta" onClick={onClose}>Helvian V1 <ArrowUpRight size={17} aria-hidden="true" /></Button>
       </div>
     </div>
   );
