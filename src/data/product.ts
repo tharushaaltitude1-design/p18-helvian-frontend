@@ -1,9 +1,9 @@
 export type ProductTitle = { before: string; highlight: string; after?: string };
 
 export const productMeta = {
-  documentTitle: 'Product | Helvian',
+  documentTitle: 'Helvian V1 | Clinical Operations Platform',
   description:
-    'Explore the Helvian clinical operations platform: patient profiles, departments, workflows, appointments, care tasks and dashboard summaries.',
+    'Explore Helvian V1’s patient workflows and care coordination tools, with a roadmap for AI-assisted clinical operations across hospital departments.',
 };
 
 export const productMarquee = ['Patient Profiles', 'Departments', 'Workflows', 'Appointments', 'Care Tasks', 'Dashboard'];
@@ -133,43 +133,43 @@ export const productPreview = {
 };
 
 export const productTechnology = {
-  label: 'Technology Foundation',
-  title: { before: 'Proposed AI foundation, ', highlight: 'scoped to operations', after: '.' } satisfies ProductTitle,
-  description: 'Proposed technology options for future development, limited to administrative workflow use.',
-  badge: 'Proposed',
-  roleLabel: 'Proposed role in Helvian',
+  label: 'Planned AI foundation',
+  title: { before: 'The tools behind a ', highlight: 'responsible scale-up', after: '.' } satisfies ProductTitle,
+  description: 'A concise view of the NVIDIA technologies being considered for future Helvian capabilities.',
+  badge: 'Planned',
+  roleLabel: 'Potential role',
   disclaimer:
-    'The technologies are proposed architectural options and do not imply finished clinical tools, medical imaging or patient monitoring integrations.',
+    'These technologies are roadmap options, not deployed Helvian features. Clinical use, integrations, infrastructure and governance would require validation before implementation.',
   items: [
     {
       name: 'NVIDIA NeMo',
-      description: 'Proposed conversational assistance development option.',
+      description: 'Language models adapted to clinical documentation, medical terminology and hospital procedures.',
       icon: 'message',
-      role: 'Could support an administrative assistance option for navigating workflow records.',
+      role: 'Could help summarize handoffs and identify suggested coordination tasks from notes.',
     },
     {
       name: 'NVIDIA Riva',
-      description: 'Proposed speech interaction technology.',
+      description: 'Speech recognition designed for responsive transcription.',
       icon: 'mic',
-      role: 'Could support proposed speech interaction for administrative workflow entry.',
-    },
-    {
-      name: 'NVIDIA NIM',
-      description: 'Proposed model deployment option.',
-      icon: 'box',
-      role: 'Could support proposed deployment of models used in administrative workflow features.',
-    },
-    {
-      name: 'NVIDIA Triton',
-      description: 'Proposed inference serving infrastructure.',
-      icon: 'server',
-      role: 'Could provide proposed inference serving for administrative workflow functions.',
+      role: 'Could support real-time clinical dictation and hands-free workflow updates.',
     },
     {
       name: 'MONAI',
-      description: 'Proposed framework for healthcare imaging AI research and development.',
+      description: 'Healthcare-focused imaging AI development framework.',
       icon: 'scan',
-      role: 'Could support proposed imaging AI research and development; not deployed in the MVP.',
+      role: 'Could support future imaging research and departmental image workflows.',
+    },
+    {
+      name: 'NVIDIA NIM',
+      description: 'Packaged services for deploying optimized AI models.',
+      icon: 'box',
+      role: 'Could support private deployment options for approved workflow assistants.',
+    },
+    {
+      name: 'NVIDIA Triton',
+      description: 'Serving infrastructure for concurrent AI workloads.',
+      icon: 'server',
+      role: 'Could help run speech, language and imaging services reliably at scale.',
     },
   ],
 };

@@ -46,7 +46,7 @@ export function Navbar({ onMenu, active }: Props) {
           })}
         </div>
         <div className="nav-actions">
-          <Button small to="/product">HV.OS <ArrowUpRight size={15} aria-hidden="true" /></Button>
+          <Button small to="/product">Helvian V1 <ArrowUpRight size={15} aria-hidden="true" /></Button>
           <IconButton label="Open menu" className="menu-trigger" onClick={onMenu}><Menu aria-hidden="true" /></IconButton>
         </div>
       </nav>

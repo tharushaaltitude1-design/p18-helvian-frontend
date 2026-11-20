@@ -1,12 +1,12 @@
 import { ArrowRight } from 'lucide-react';
 import { hero } from '@/data';
 import { useSectionLink } from '@/hooks';
-import { Button, IconButton, Section, SectionLabel, TitleWithHighlight } from '@/components/ui';
+import { Button, Section, SectionLabel, TitleWithHighlight } from '@/components/ui';
 import { DashboardMock } from '@/components/dashboard/DashboardMock';
 import { FloatingCard } from './FloatingCard';
 import { StatCount } from './StatCount';
 
-export function Hero({ onDemo }: { onDemo: () => void }) {
+export function Hero() {
   const goTo = useSectionLink();
   return (
     <Section id="home" plain className="hero" labelledBy="hero-title">
@@ -20,12 +20,15 @@ export function Hero({ onDemo }: { onDemo: () => void }) {
           <p>{hero.description}</p>
           <div className="hero__actions">
             <div className="hero__cta">
-              <Button onClick={onDemo}>{hero.primaryCta}</Button>
-              <IconButton size="md" label={hero.primaryCtaLabel} onClick={onDemo} tabIndex={-1} aria-hidden="true">
-                <ArrowRight size={19} aria-hidden="true" />
-              </IconButton>
+              <Button to="/product">
+                {hero.primaryCta} <ArrowRight size={17} aria-hidden="true" />
+              </Button>
             </div>
-            <a className="text-link" href={hero.secondaryHref} onClick={(event) => goTo(event, hero.secondaryHref)}>
+            <a
+              className="text-link"
+              href={hero.secondaryHref}
+              onClick={(event) => goTo(event, hero.secondaryHref)}
+            >
               {hero.secondaryCta}
             </a>
           </div>

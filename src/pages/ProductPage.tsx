@@ -1,17 +1,15 @@
 import { useState } from 'react';
 import { productMarquee, productMeta, productPreview, productTechnology, ui } from '@/data';
 import { useLockBodyScroll, usePageMeta, useTheme, useToast } from '@/hooks';
-import { Hero } from '@/components/sections/hero';
 import { ApplicationPreview } from '@/components/sections/app-preview';
 import { Technology } from '@/components/sections/technology';
 import { Governance } from '@/components/sections/governance';
 import {
-  ProductArchitecture,
   ProductCapabilities,
   ProductClosingCta,
-  ProductEngagement,
+  ProductHero,
   ProductOverview,
-  ProductScope,
+  ProductRoadmap,
   ProductUseCases,
 } from '@/components/sections/product';
 import { Footer, Marquee, MobileMenu, Navbar } from '@/components/layout';
@@ -38,12 +36,12 @@ export function ProductPage() {
         onDemo={() => { setMenuOpen(false); openDemo(); }}
       />
       <main id="main" tabIndex={-1}>
-        <Hero onDemo={openDemo} />
+        <ProductHero />
         <Marquee items={productMarquee} />
         <ProductOverview onDemo={openDemo} />
         <ProductCapabilities />
         <ProductUseCases />
-        <ApplicationPreview caption={productPreview.caption} />
+        <ProductRoadmap />
         <Technology
           id="product-technology"
           label={productTechnology.label}
@@ -54,10 +52,7 @@ export function ProductPage() {
           roleLabel={productTechnology.roleLabel}
           disclaimer={productTechnology.disclaimer}
         />
-        <ProductArchitecture />
         <Governance />
-        <ProductScope />
-        <ProductEngagement />
         <ProductClosingCta onDemo={openDemo} />
       </main>
       <Footer onToast={toast.show} />

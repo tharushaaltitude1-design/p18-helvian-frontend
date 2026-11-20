@@ -2,6 +2,8 @@ export { ProductArchitecture } from './ProductArchitecture';
 export { ProductCapabilities } from './ProductCapabilities';
 export { ProductClosingCta } from './ProductClosingCta';
 export { ProductEngagement } from './ProductEngagement';
+export { ProductHero } from './ProductHero';
 export { ProductOverview } from './ProductOverview';
+export { ProductRoadmap } from './ProductRoadmap';
 export { ProductScope } from './ProductScope';
 export { ProductUseCases } from './ProductUseCases';

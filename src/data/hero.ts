@@ -3,8 +3,7 @@ export const hero = {
   title: { before: 'Every patient workflow. ', highlight: 'One clear view.' },
   description:
     'Helvian centralizes patient workflow records, appointments and care coordination tasks so every department stays in sync.',
-  primaryCta: 'Request Demo',
-  primaryCtaLabel: 'Request a demo',
+  primaryCta: 'Explore Helvian V1',
   secondaryCta: 'View Platform',
   secondaryHref: '#platform',
   stats: [
